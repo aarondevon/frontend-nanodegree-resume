@@ -4,7 +4,7 @@ var bio = {
     "role" : "Web Developer",
     "contact" : {
         "email" : "me@aarondevon.com",
-        "phone" : "952-412-6490"
+        "mobile" : "952-412-6490"
     },
     "location" : {
         "street" : "5342 Woodland Rd",
@@ -19,11 +19,11 @@ var bio = {
 // Variables that that fill in empty data in HTML template
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var phoneCon = HTMLmobile.replace("%data%", bio.contact.phone);
-var emailCon = HTMLemail.replace("%data%", bio.contact.email);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+var formattedEmail = HTMLemail.replace("%data%", bio.contact.email);
 
 // Function to loop through skill array in bio object
-var formattedSkills = function() {
+bio.skillFunction = function() {
     $("#header").append(HTMLskillsStart);
     for(var i = 0; i < bio.skills.length; i++) {
         var tempSkill = HTMLskills.replace("%data%", bio.skills[i]);
@@ -35,7 +35,15 @@ var formattedSkills = function() {
 
 $("#header").append(formattedName);
 $("#header").append(formattedRole);
-$("#topContacts").append(phoneCon);
-$("#topContacts").append(emailCon);
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedEmail);
 //I don't think I am calling the function correctly
-formattedSkills();
+bio.skillFunction();
+
+var work = {
+
+};
+
+var education = {
+
+};
