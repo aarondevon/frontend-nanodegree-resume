@@ -79,21 +79,25 @@ $(".work-entry").append(formattedWorkDescription);
 //Education object using bracket notation
 var education = {};
 education["schoolName"] = "Columbia College";
-education["degree"] = "Infromation Systems";
-education[""] = ;
-education[""] = ;
-education[""] = ;
+education["degree"] = "B.S.";
+education["dates"] = "2013 to Current";
+education["location"] = "Columbia, MO";
+education["major"] = "Information Systems";
 
-//Education with bracket notation
-
+//Education with dot notation
+var formattedSchoolName = HTMLschoolStart.replace("%data%", education.schoolName).replace("#", "http://www.ccis.edu/degrees/?program=BSCIS");
+var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.degree);
+var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.dates);
+var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.location);
+var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.major);
 
 //Append Education information
-// $("#education").append(HTMLschoolStart);
-// $("").append();
-// $("").append();
-// $("").append();
-// $("").append();
-// $("").append();
+$("#education").append(HTMLschoolStart);
+$(".education-entry").append(formattedSchoolName);
+$(".education-entry").append(formattedSchoolDegree);
+$(".education-entry").append(formattedSchoolDates);
+$(".education-entry").append(formattedSchoolLocation);
+$(".education-entry").append(formattedSchoolMajor);
 
 
 
