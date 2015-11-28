@@ -52,12 +52,67 @@ $("#header").prepend(formattedPicture);
 bio.formattedSkills();
 
 //Work object using dot notation
-var work = {
+var work = {};
+work.employer = "Pizza Luce'";
+work.title = "Delivery Driver/Server";
+work.dates = "October 2010 to March 2015";
+work.location = "Richfield, MN";
+work.description = "Responsible for delivery of food, accurate order taking, and friendly customer service. Member of the leadership and training team";
+
+//Work with bracket notation
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work["employer"]).replace("#", "https://pizzaluce.com/");
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", work["title"]);
+var formattedWorkDates = HTMLworkDates.replace("%data%", work["dates"]);
+var formattedWorkLocation = HTMLworkLocation.replace("%data%", work["location"]);
+var formattedWorkDescription = HTMLworkLocation.replace("%data%", work["description"]);
+
+//Append Work information
+$("#workExperience").append(HTMLworkStart);
+$(".work-entry").append(formattedWorkEmployer);
+$(".work-entry").append(formattedWorkTitle);
+$(".work-entry").append(formattedWorkDates);
+$(".work-entry").append(formattedWorkLocation);
+$(".work-entry").append(formattedWorkDescription);
 
 
-};
 
 //Education object using bracket notation
-var education = {
+var education = {};
+education["schoolName"] = "Columbia College";
+education["degree"] = "Infromation Systems";
+education[""] = ;
+education[""] = ;
+education[""] = ;
 
-};
+//Education with bracket notation
+
+
+//Append Education information
+// $("#education").append(HTMLschoolStart);
+// $("").append();
+// $("").append();
+// $("").append();
+// $("").append();
+// $("").append();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
