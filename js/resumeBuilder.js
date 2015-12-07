@@ -52,13 +52,44 @@ $("#header").prepend(formattedPicture);
 bio.formattedSkills();
 
 //Work object using dot notation
-var work = {};
-work.employer = "Pizza Luce'";
-work.title = "Delivery Driver/Server";
-work.dates = "October 2010 to March 2015";
-work.location = "Richfield, MN";
-work.description = "Responsible for delivery of food, accurate order taking, and friendly customer service. Member of the leadership and training team";
-
+// var work = {};
+// work.employer = "Pizza Luce'";
+// work.title = "Delivery Driver/Server";
+// work.dates = "October 2010 to March 2015";
+// work.location = "Richfield, MN";
+// work.description = "Responsible for delivery of food, accurate order taking, and friendly customer service. Member of the leadership and training team";
+var work = {
+    "jobs": [
+        "tintic": {
+            "employer": "TiNTiC",
+            "title": "Technology Intern",
+            "location": "St. George, UT",
+            "dates": "2014 to Current",
+            "description": "Assist in the administration and development of the technology infrastructure. Monitor existing technology and deploy new technology in an effort to reduce costs, improve efficiencies, and generate revenue"
+        },
+        "luce": {
+            "employer": "Pizza Luce'",
+            "title": "Delivery Driver/Server",
+            "location": "Richfield, MN",
+            "dates": "October 2010 to March 2015",
+            "description": "Responsible for delivery of food, accurate order taking, and friendly customer service. Member of the leadership and training team"
+        },
+        "hbsa": {
+            "employer": "HBSA",
+            "title": "Sales and Training Specialist",
+            "location": "Eden Prairie, MN",
+            "dates": "2010 to 2012",
+            "description": "Marketed and sold online marketing training packages. Worked with clients one-on-one and trained them in online marketing. Handled customer complaints in a timely and effective manner via phone, chat, and email"
+        },
+        "papa": {
+            "employer": "Papa Johns",
+            "title": "Shift Lead",
+            "location": "MTKA, MN",
+            "dates": "2005 to 2010"
+            "description": "Performed managerial duties: Trained team members, Created work schedules, Marketed and created business relationships with local businesses in the delivery area, Handled customer complaints in a timely and effective manner, and Created win-win solutions"
+        }
+    ]
+}
 //Work with bracket notation
 var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work["employer"]).replace("#", "https://pizzaluce.com/");
 var formattedWorkTitle = HTMLworkTitle.replace("%data%", work["title"]);
@@ -98,6 +129,30 @@ $(".education-entry").append(formattedSchoolDegree);
 $(".education-entry").append(formattedSchoolDates);
 $(".education-entry").append(formattedSchoolLocation);
 $(".education-entry").append(formattedSchoolMajor);
+
+var education = {
+    "schools": [
+        {
+            "name": "Columbia College",
+            "city": "Columbia",
+            "degree": "Information Systems",
+            "dates": "2013 to Current"
+        },
+        {
+            "name": "Henneping Tech",
+            "city": "Eden Prairie",
+            "degree": "Accounting",
+            "dates": "2011 to 2012"
+
+        },
+        {
+            "name": "Udacity",
+            "city": "Don't know",
+            "degree": "Front End Nanodegree",
+            // "dates": "November 2015 to Current"
+        }
+    ]
+}
 
 
 
