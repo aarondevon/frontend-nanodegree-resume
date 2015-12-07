@@ -51,13 +51,7 @@ $("#header").prepend(formattedPicture);
 //I don't think I am calling the function correctly
 bio.formattedSkills();
 
-//Work object using dot notation
-// var work = {};
-// work.employer = "Pizza Luce'";
-// work.title = "Delivery Driver/Server";
-// work.dates = "October 2010 to March 2015";
-// work.location = "Richfield, MN";
-// work.description = "Responsible for delivery of food, accurate order taking, and friendly customer service. Member of the leadership and training team";
+//Work object
 var work = {
     "jobs": [
         "tintic": {
