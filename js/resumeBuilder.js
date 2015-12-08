@@ -84,20 +84,36 @@ var work = {
         }
     ]
 }
-//Work with bracket notation
-var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work["employer"]).replace("#", "https://pizzaluce.com/");
-var formattedWorkTitle = HTMLworkTitle.replace("%data%", work["title"]);
-var formattedWorkDates = HTMLworkDates.replace("%data%", work["dates"]);
-var formattedWorkLocation = HTMLworkLocation.replace("%data%", work["location"]);
-var formattedWorkDescription = HTMLworkLocation.replace("%data%", work["description"]);
 
-//Append Work information
-$("#workExperience").append(HTMLworkStart);
-$(".work-entry").append(formattedWorkEmployer);
-$(".work-entry").append(formattedWorkTitle);
-$(".work-entry").append(formattedWorkDates);
-$(".work-entry").append(formattedWorkLocation);
-$(".work-entry").append(formattedWorkDescription);
+var project {
+    projects [
+        {
+            "title": "",
+            "dates": "",
+            "description",
+            "images"
+        },
+         {
+            "title": "",
+            "dates": "",
+            "description",
+            "images"
+        },
+         {
+            "title": "",
+            "dates": "",
+            "description",
+            "images"
+        },
+         {
+            "title": "",
+            "dates": "",
+            "description",
+            "images"
+        },
+    ]
+}
+
 
 
 
