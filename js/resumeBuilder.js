@@ -1,18 +1,5 @@
 // Object literal with personal info
-var bio = {
-    "name" : "Aaron D. Sawyer",
-    "role" : "Web Developer",
-    "contact" : {
-        "mobile" : "<a href='tel:952-412-6490'>952-412-6490</a>",
-        "email" : "<a href='mailto:me@aarondevon.com'>me@aarondevon.com</a>",
-        "twitter" : "<a href='https://twitter.com/AarondSawyer' target='_blank'>@AarondSawyer</a>",
-        "github" : "<a href='https://github.com/aarondevon' target='_blank'>aarondevon</a>",
-        "blog" : "<a href='http://www.aarondevon.com/' target='_blank'>aarondevon.com</a>"
-    },
-    "location" : "5342 Woodland Rd Minnetonka, Minnesota 55345",
-    "picture" : "images/me_1.jpg",
-    "welcome" : "Welcome to my resume",
-    "skills" : ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "AJAX", "Canvas", "Git"]
+
 };
 // Variables that that fill in empty data in HTML template
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -117,6 +104,7 @@ var project {
 
 
 
+
 //Education object using bracket notation
 var education = {};
 education["schoolName"] = "Columbia College";
@@ -164,7 +152,20 @@ var education = {
     ]
 }
 
-
+var bio = {
+    "name" : "Aaron D. Sawyer",
+    "role" : "Web Developer",
+    "contact" : {
+        "mobile" : "<a href='tel:952-412-6490'>952-412-6490</a>",
+        "email" : "<a href='mailto:me@aarondevon.com'>me@aarondevon.com</a>",
+        "twitter" : "<a href='https://twitter.com/AarondSawyer' target='_blank'>@AarondSawyer</a>",
+        "github" : "<a href='https://github.com/aarondevon' target='_blank'>aarondevon</a>",
+        "blog" : "<a href='http://www.aarondevon.com/' target='_blank'>aarondevon.com</a>"
+    },
+    "location" : "5342 Woodland Rd Minnetonka, Minnesota 55345",
+    "picture" : "images/me_1.jpg",
+    "welcome" : "Welcome to my resume",
+    "skills" : ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "AJAX", "Canvas", "Git"]
 
 
 
