@@ -50,6 +50,7 @@ work.display = function displayWork() {
 
   });
 }
+// calls work display function
 work.display();
 
 
