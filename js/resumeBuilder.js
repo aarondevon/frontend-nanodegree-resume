@@ -119,32 +119,76 @@ var bio = {
     "github": "<a href='https://github.com/aarondevon' target='_blank'>aarondevon</a>",
     "blog": "<a href='http://www.aarondevon.com/' target='_blank'>aarondevon.com</a>"
   },
-  "location": "5342 Woodland Rd Minnetonka, Minnesota 55345",
+  "location": "Minnetonka, Minnesota",
   "picture": "images/me_1.jpg",
   "welcome": "Welcome to my resume",
   "skills": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "AJAX", "Canvas", "Git"]
 };
 
-if(bio.skills.length > 0) {
+
+
+
+bio.display = function() {
   $("#header").append(HTMLskillsStart);
-  var formattedSkill = HTMLskills.replace("%data", bio.skills[0]);
-  $("#skills").append(formattedSkill);
-
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var formattedMobile = HTMLmobile.replace("%data%", bio.contact.mobile);
+  var formattedEmail = HTMLemail.replace("%data%", bio.contact.email);
+  var formattedTwitter = HTMLtwitter.replace("%data%", bio.contact.twitter);
+  var formattedGithub = HTMLgithub.replace("%data%", bio.contact.github);
+  var formattedBlog = HTMLblog.replace("%data%", bio.contact.blog);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.location);
+  var formattedPicture = HTMLbioPic.replace("%data%", bio.picture);
+  var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
   // Function to loop through skill array in bio object
-  // bio["formattedSkills"] = function() {
-  //   for(var i = 0; i < bio.skills.length; i++) {
-  //     var tempSkill = HTMLskills.replace("%data%", bio.skills[i]);
-  //     $("#skills").append(tempSkill);
-  //   }
-  // };
+  bio["formattedSkills"] = function() {
+    for(var i = 0; i < bio.skills.length; i++) {
+      var tempSkill = HTMLskills.replace("%data%", bio.skills[i]);
+      $("#skills").append(tempSkill);
+    }
+  };
+
+  $("#header").append(formattedName);
+  bio.internationalName = function inName() {
+    $("#main").append(internationalizeButton);
+    $("button").click(function(){
+      $("#name").remove();
+      var firstInitial = bio.name.charAt(0).toUpperCase();
+      console.log(firstInitial);
+      var intLast = bio.name.slice(6).toUpperCase();
+      console.log(intLast);
+      var partName = bio.name.slice(1, 6);
+      console.log(partName);
+      var internationalName = firstInitial + partName + " " + intLast;
+      console.log(internationalName);
+      internationalName = HTMLheaderName.replace("%data%", internationalName);
+      $("#header").append(internationalName);
+      return internationalName;
+    });
+  };
+  bio.internationalName();
+$("#header").append(formattedRole);
+$("#header").append(formattedWelcome);
+$("#footerContacts").append(formattedMobile);
+$("#footerContacts").append(formattedEmail);
+$("#footerContacts").append(formattedTwitter);
+$("#footerContacts").append(formattedGithub);
+$("#footerContacts").append(formattedBlog);
+$("#footerContacts").append(formattedLocation);
+$("#topContacts").append(formattedMobile);
+$("#topContacts").append(formattedEmail);
+$("#topContacts").append(formattedTwitter);
+$("#topContacts").append(formattedGithub);
+$("#topContacts").append(formattedBlog);
+$("#topContacts").append(formattedLocation);
+$("#header").prepend(formattedPicture);
+
+// Calls skill function
+bio["formattedSkills"]();
 }
+//Calls bio display function
+bio.display();
 
-// bio["formattedSkills"]();
-
-bio.internationalName = function inName() {
-
-
-};
 
 // Tracks user clicks
 $(document).click(function(loc) {
