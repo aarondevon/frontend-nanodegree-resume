@@ -225,7 +225,7 @@ var project = {
   ]
 };
 
-
+$("#mapDiv").append(googleMap);
 
 
 
