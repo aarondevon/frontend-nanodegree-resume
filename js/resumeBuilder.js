@@ -196,41 +196,52 @@ work.display = function displayWork() {
 work.display();
 
 //Project object
-var project = {
+var projects = {
   "projects": [
     {
       "title": "Classic Arcade Game Clone",
       "dates": "December 2015 to Current",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "../images/commingsoonorange.png"
+      "images": "images/comingsoonorange.png"
     },
      {
       "title": "Neighborhood Map",
       "dates": "January 2016",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "../images/commingsoonorange.png"
+      "images": "images/comingsoonorange.png"
     },
      {
       "title": "Health Tracker",
       "dates": "January 2016",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "../images/commingsoonorange.png"
+      "images": "images/comingsoonorange.png"
     },
      {
       "title": "YOXO Create and Share",
       "dates": "July 2015",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "../images/commingsoonorange.png"
+      "images": "images/comingsoonorange.png"
     },
   ]
 };
 
-project.display = function() {
+projects.display = function() {
+  for(var i = 0; i < projects.projects.length; i++) {
+    $("#projects").append(HTMLprojectStart);
+    var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+    var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+    var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+    var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
 
+    $(".project-entry:last").append(formattedProjectTitle);
+    $(".project-entry:last").append(formattedProjectDates);
+    $(".project-entry:last").append(formattedProjectDescription);
+    $(".project-entry:last").append(formattedProjectImage);
+  }
 }
 
 //Calls function poject.display
-project.display();
+projects.display();
 
 $("#mapDiv").append(googleMap);
 
