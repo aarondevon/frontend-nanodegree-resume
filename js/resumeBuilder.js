@@ -195,41 +195,44 @@ work.display = function displayWork() {
 // calls work display function
 work.display();
 
-
+//Project object
 var project = {
   "projects": [
     {
-      "title": "",
-      "dates": "",
-      "description": "",
-      "images": ""
+      "title": "Classic Arcade Game Clone",
+      "dates": "December 2015 to Current",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
+      "images": "../images/commingsoonorange.png"
     },
      {
-      "title": "",
-      "dates": "",
-      "description": "",
-      "images": ""
+      "title": "Neighborhood Map",
+      "dates": "January 2016",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
+      "images": "../images/commingsoonorange.png"
     },
      {
-      "title": "",
-      "dates": "",
-      "description": "",
-      "images": ""
+      "title": "Health Tracker",
+      "dates": "January 2016",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
+      "images": "../images/commingsoonorange.png"
     },
      {
-      "title": "",
-      "dates": "",
-      "description": "",
-      "images": ""
+      "title": "YOXO Create and Share",
+      "dates": "July 2015",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
+      "images": "../images/commingsoonorange.png"
     },
   ]
 };
 
+project.display = function() {
+
+}
+
+//Calls function poject.display
+project.display();
+
 $("#mapDiv").append(googleMap);
-
-
-
-
 
 // Tracks user clicks
 $(document).click(function(loc) {
