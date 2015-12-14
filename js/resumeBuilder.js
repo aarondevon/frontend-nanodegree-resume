@@ -94,7 +94,7 @@ var education = {
       "location": "Eden Prairie",
       "degree": "Accounting",
       "major": "A.A.S.",
-      "dates": "2011 to 2012",
+      "date": "2011 to 2012",
       "url": "https://www.hennepintech.edu/"
 
     }
@@ -103,7 +103,7 @@ var education = {
     {
       "title": "Front End Nanodegree",
       "school": "Udacity",
-      "dates": "November 2015 to Current",
+      "date": "November 2015 to Current",
       "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }
   ]
@@ -116,7 +116,7 @@ education.display = function() {
     $("#education").append(HTMLschoolStart);
     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
+    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].date);
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
     var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
 
@@ -131,12 +131,12 @@ education.display = function() {
   $("#education").append(HTMLschoolStart);
 
   var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[0].title);
-  var formattedOnlineSchool = HTMLschoolName.replace("%data%", education.onlineCourses[0].school).replace("#", education.onlineCourses[0].url);
-  var formattedOnlineDates = HTMLschoolDates.replace("%data%", education.onlineCourses[0].dates);
+  var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[0].school).replace("#", education.onlineCourses[0].url);
+  var formattedOnlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[0].date);
   $(".education-entry:last").append(HTMLonlineClasses);
   $(".education-entry:last").append(formattedOnlineTitle);
   $(".education-entry:last").append(formattedOnlineSchool);
-  $(".education-entry:last").append(formattedOnlineDates);
+  $(".education-entry:last").append(formattedOnlineDate);
 };
 education.display();
 
