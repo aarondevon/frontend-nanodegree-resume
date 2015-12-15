@@ -7,7 +7,7 @@ var bio = {
     "email": "<a href='mailto:me@aarondevon.com'>me@aarondevon.com</a>",
     "github": "<a href='https://github.com/aarondevon' target='_blank'>aarondevon</a>",
     "twitter": "<a href='https://twitter.com/AarondSawyer' target='_blank'>@AarondSawyer</a>",
-    "location": "Minnetonka, Minnesota"
+    "location": "<a href='http://eminnetonka.com/' target='_blank'>Minnetonka, Minnesota</a>"
   },
   "welcomeMessage": "Welcome to my resume",
   "skills": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "AJAX", "Canvas", "Git"],
