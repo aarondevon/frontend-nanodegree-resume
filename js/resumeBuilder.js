@@ -5,14 +5,13 @@ var bio = {
   "contacts": {
     "mobile": "<a href='tel:952-412-6490'>952-412-6490</a>",
     "email": "<a href='mailto:me@aarondevon.com'>me@aarondevon.com</a>",
-    "twitter": "<a href='https://twitter.com/AarondSawyer' target='_blank'>@AarondSawyer</a>",
     "github": "<a href='https://github.com/aarondevon' target='_blank'>aarondevon</a>",
+    "twitter": "<a href='https://twitter.com/AarondSawyer' target='_blank'>@AarondSawyer</a>",
     "blog": "<a href='http://www.aarondevon.com/' target='_blank'>aarondevon.com</a>",
     "location": "Minnetonka, Minnesota"
   },
-  "welcome": "Welcome to my resume",
+  "welcomeMessage": "Welcome to my resume",
   "skills": ["HTML", "CSS", "Bootstrap", "JS", "jQuery", "AJAX", "Canvas", "Git"],
-  "location": "Minnetonka, Minnesota",
   "biopic": "images/me_1.jpg"
 };
 
@@ -26,11 +25,11 @@ bio.display = function() {
   var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
   var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
-  var formattedLocation = HTMLlocation.replace("%data%", bio.location);
+  var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
-  var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.contacts.welcome);
+  var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
   // Function to loop through skill array in bio object
-  bio["formattedSkills"] = function() {
+  bio.formattedSkills = function() {
     for(var i = 0; i < bio.skills.length; i++) {
       var tempSkill = HTMLskills.replace("%data%", bio.skills[i]);
       $("#skills").append(tempSkill);
@@ -56,25 +55,25 @@ bio.display = function() {
     });
   };
   bio.internationalName();
-$("#header").append(formattedRole);
-$("#header").append(formattedWelcome);
-$("#footerContacts").append(formattedMobile);
-$("#footerContacts").append(formattedEmail);
-$("#footerContacts").append(formattedTwitter);
-$("#footerContacts").append(formattedGithub);
-$("#footerContacts").append(formattedBlog);
-$("#footerContacts").append(formattedLocation);
-$("#topContacts").append(formattedMobile);
-$("#topContacts").append(formattedEmail);
-$("#topContacts").append(formattedTwitter);
-$("#topContacts").append(formattedGithub);
-$("#topContacts").append(formattedBlog);
-$("#topContacts").append(formattedLocation);
-$("#header").prepend(formattedPicture);
+  $("#header").append(formattedRole);
+  $("#header").append(formattedWelcome);
+  $("#footerContacts").append(formattedMobile);
+  $("#footerContacts").append(formattedEmail);
+  $("#footerContacts").append(formattedTwitter);
+  $("#footerContacts").append(formattedGithub);
+  $("#footerContacts").append(formattedBlog);
+  $("#footerContacts").append(formattedLocation);
+  $("#topContacts").append(formattedMobile);
+  $("#topContacts").append(formattedEmail);
+  $("#topContacts").append(formattedTwitter);
+  $("#topContacts").append(formattedGithub);
+  $("#topContacts").append(formattedBlog);
+  $("#topContacts").append(formattedLocation);
+  $("#header").prepend(formattedPicture);
 
-// Calls skill function
-bio["formattedSkills"]();
-}
+  // Calls skill function
+  bio.formattedSkills();
+};
 //Calls bio display function
 bio.display();
 
@@ -84,16 +83,16 @@ var education = {
     {
       "name": "Columbia College",
       "location": "Columbia",
-      "degree": "Information Systems",
-      "major": "Bachelor of Science",
+      "degree": "Bachelor of Science",
+      "majors": ["Information Systems"],
       "dates": "2013 to Current",
       "url": "http://www.ccis.edu/"
     },
     {
       "name": "Henneping Tech",
       "location": "Eden Prairie",
-      "degree": "Accounting",
-      "major": "A.A.S.",
+      "degree": "A.A.S.",
+      "majors": ["Accounting"],
       "date": "2011 to 2012",
       "url": "https://www.hennepintech.edu/"
 
@@ -118,7 +117,7 @@ education.display = function() {
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
     var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].date);
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-    var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].major);
+    var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors[0]);
 
     //Append Education information
 
@@ -191,7 +190,7 @@ work.display = function displayWork() {
     $(".work-entry:last").append(formattedWorkDescription);
 
   });
-}
+};
 // calls work display function
 work.display();
 
@@ -202,25 +201,25 @@ var projects = {
       "title": "Classic Arcade Game Clone",
       "dates": "December 2015 to Current",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "images/comingsoonorange.png"
+      "images": ["images/comingsoonorange.png"]
     },
      {
       "title": "Neighborhood Map",
       "dates": "January 2016",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "images/comingsoonorange.png"
+      "images": ["images/comingsoonorange.png"]
     },
      {
       "title": "Health Tracker",
       "dates": "January 2016",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "images/comingsoonorange.png"
+      "images": ["images/comingsoonorange.png"]
     },
      {
       "title": "YOXO Create and Share",
       "dates": "July 2015",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor est non dignissim volutpat. Donec imperdiet risus quis eros venenatis, in bibendum mi dictum. Curabitur mollis, ante id efficitur volutpat, massa arcu ullamcorper leo, a maximus neque nulla eu velit. Vivamus vitae odio urna. Curabitur sed massa dolor. Aliquam erat volutpat. In risus nulla, hendrerit a diam sit amet, dignissim semper tellus. Aliquam rhoncus, augue eget interdum egestas, mauris elit tincidunt lacus, vel dictum erat mauris vel urna. Quisque vulputate aliquam maximus.",
-      "images": "images/comingsoonorange.png"
+      "images": ["images/comingsoonorange.png"]
     },
   ]
 };
@@ -231,14 +230,14 @@ projects.display = function() {
     var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
     var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
     var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
-    var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
+    var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images[0]);
 
     $(".project-entry:last").append(formattedProjectTitle);
     $(".project-entry:last").append(formattedProjectDates);
     $(".project-entry:last").append(formattedProjectDescription);
     $(".project-entry:last").append(formattedProjectImage);
   }
-}
+};
 
 //Calls function poject.display
 projects.display();
@@ -252,7 +251,6 @@ $(document).click(function(loc) {
 
   logClicks(x,y);
 });
-
 
 
 
