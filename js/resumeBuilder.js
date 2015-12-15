@@ -7,7 +7,6 @@ var bio = {
     "email": "<a href='mailto:me@aarondevon.com'>me@aarondevon.com</a>",
     "github": "<a href='https://github.com/aarondevon' target='_blank'>aarondevon</a>",
     "twitter": "<a href='https://twitter.com/AarondSawyer' target='_blank'>@AarondSawyer</a>",
-    "blog": "<a href='http://www.aarondevon.com/' target='_blank'>aarondevon.com</a>",
     "location": "Minnetonka, Minnesota"
   },
   "welcomeMessage": "Welcome to my resume",
@@ -24,7 +23,6 @@ bio.display = function() {
   var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
   var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
   var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-  var formattedBlog = HTMLblog.replace("%data%", bio.contacts.blog);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
   var formattedPicture = HTMLbioPic.replace("%data%", bio.biopic);
   var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -61,7 +59,6 @@ bio.display = function() {
   $("#footerContacts").append(formattedEmail);
   $("#footerContacts").append(formattedTwitter);
   $("#footerContacts").append(formattedGithub);
-  $("#footerContacts").append(formattedBlog);
   $("#footerContacts").append(formattedLocation);
   $("#topContacts").append(formattedMobile);
   $("#topContacts").append(formattedEmail);
