@@ -19,7 +19,7 @@ var education = {
   "schools": [
     {
       "name": "Columbia College",
-      "location": "Columbia",
+      "location": "Columbia, Missouri",
       "degree": "Bachelor of Science",
       "majors": ["Information Systems"],
       "dates": "2013 to Current",
@@ -27,10 +27,10 @@ var education = {
     },
     {
       "name": "Henneping Tech",
-      "location": "Eden Prairie",
+      "location": "Eden Prairie, Minnesota",
       "degree": "A.A.S.",
       "majors": ["Accounting"],
-      "date": "2011 to 2012",
+      "dates": "2011 to 2012",
       "url": "https://www.hennepintech.edu/"
 
     }
@@ -161,7 +161,7 @@ education.display = function() {
     $("#education").append(HTMLschoolStart);
     var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("#", education.schools[i].url);
     var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].date);
+    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
     var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
     var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors[0]);
 
